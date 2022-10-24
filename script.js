@@ -6,7 +6,7 @@ const loadQuiz = function() {
   
     // Данные
     const questionsBank = {
-      'What is the capital city of China?' : ['⚽️', '🏫', '🏝', 0],
+      '1. What color does not match?' : ['🥝', '🍐', '🍎', 0],
       'What is the capital city of Switzerland?' : ['Zurich', 'Bern' , 'Geneva', 1],
       'What is the capital city of Germany? ' : ['Munich', 'Dresden', 'Berlin', 1]
     }
@@ -19,7 +19,7 @@ const loadQuiz = function() {
       const question = Object.keys(questionsBank)[current]
       questionBox.innerHTML = question
     }
-  
+  console.log(loadQuestion)
     // Функция отображает ответы относящиеся к текущему вопросу и навешивает обработчик клика
     function loadAnswers(current) {
       const answers = Object.values(questionsBank)[current]
@@ -30,6 +30,8 @@ const loadQuiz = function() {
   
         const createDiv = document.createElement('div')
         createDiv.textContent = answers[index]
+        createDiv.classList.add("answers-flex");
+
         createDiv.addEventListener('click', checkAnswer(index, answers)) // можно не навешивать на каждый элемент а повесить на весь контейнер answers
   
         answerBox.appendChild(createDiv)
@@ -56,7 +58,7 @@ const loadQuiz = function() {
     // Функция отвечает за отображение правильных и не правильных ответов
     function addChecker(flag) {
       const createDiv = document.createElement('div')
-      createDiv.textContent = ${current + 1}
+      createDiv.textContent = $;{current + 1}
   
       if (flag) {
         createDiv.className += 'correct'
