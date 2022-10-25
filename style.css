@@ -2,25 +2,18 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(#FDFFB6, #fafd9d);
-    color: #A0C4FF;
+    background: radial-gradient(circle at 0 0, #fff691, #fff25C);
+    color: #60D8FF;
     font-family: 'GROBOLD', sans-serif;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
-    
-   
-    
-    
+    flex-direction:column; 
   }
   
-  h1{
+h1{
     font-size: 100px;
-    border-style:  #A0C4FF;
-  -webkit-text-stroke: 0.5px rgb(2, 2, 2);
-    
+    text-shadow: 6px 7px 7px rgb(144, 143, 143);
     position: relative;
     animation: mymove 1s;
     animation-timing-function: ease-in-out;
@@ -29,101 +22,91 @@ body {
     from {top: -200px;}
     to {top: 0px;}
   }
-    
-  .questions {
+.questions {
     display: flex;
     flex-direction: column;
     transition: transform 0.5s;
     background: #f5f7f8;
     width: 830px;
-    height: 120px;
-    font-size: 50px;
+    height: 180px;
+    font-size: 80px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    -webkit-text-stroke: 1.5px rgb(2, 2, 2);
-    color: #A0C4FF;
-    text-shadow: 0px 0px 0px rgb(92, 70, 206);
+    color: #FF63BB;
     border-radius: 20px;
     padding: 5px;
     margin: 50px;
-    
-    
-    
+    text-shadow: 6px 7px 7px rgb(144, 143, 143);  
   }
-  .questions:hover {
+.questions:hover {
     transform: scale(1.3);
   }
-  .answers {
-    display: flex;
-    flex-direction: row;
-    
-    background: linear-gradient(#FDFFB6, #fafd9d);
-    ;
-    width: 80%;
-    height: 120px;
-    flex-flow: row-wrap;
-    justify-content: space-evenly;
-    text-shadow: 6px 7px 7px rgb(171, 69, 22);
-    text-align: center;
-    
-    border-radius: 20px;
-    padding: 5px;
-    margin: 50px;
-    
-    
-  }
-  
-img{
-    position: relative;
-    text-align: left;
-
+.funboy{
+display: flex;
+flex-direction: row;
+justify-content: right;
+text-align: right;
+width: 100%;  
+font-size: 100px;  
 }
-
 .answers-flex{
+ display: flex;
  font-size: 100px;
  width: 150px;
  height: 150px;
  background-color: white;
- margin: 5px;
+ justify-content: center;
+ justify-content: space-around;
+ align-items: center;
+ text-align: center;
+ margin: 55px;
  border-radius: 20px;
  transition: transform 0.5s;
  text-shadow: 6px 7px 7px rgb(144, 143, 143);
- 
-
-   
-
-}
-  
+} 
 .answers-flex:hover {
-    transform: scale(1.3);
+ transform: scale(1.3);
   }
-
-
-
-  
-
-  
-  
+.answers{
+ display: flex;
+ flex-direction: row; 
+}  
 .correct {
-    background-color: #CAFFBF;
+width: 500px;
+height: 100px;
+background-color: #CAFFBF;
+display: flex;
+flex-flow: row-wrap;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
 }
 .false {
-    background-color: #FFADAD;
+width: 50px;
+height: 50px;
+background-color: #FFADAD;
+display: flex;
+flex-flow: row-wrap;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
 }
-
 .checker{
-    display: flex;
-    flex-flow: row-wrap;
-    justify-content: space-evenly;
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    margin: 5px;
-    border-radius: 20px;
-    align-items: center;
-    text-align: center;
-    border: 5px;
+display: flex;
+flex-flow: row-wrap;
+justify-content: space-evenly;
+font-size: 50px;
+width: 50px;
+height: 50px;
+background-color: white;
+margin: 5px;
+border-radius: 20px;
+align-items: center;
+text-align: center;
+border: 5px;
 }
+h3{
+font-size: 50px;
 
+}

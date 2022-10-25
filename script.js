@@ -1,18 +1,29 @@
-
+// let music = new Audio('./kids-music.mp3')
+//     music.volume=1;
+//     music.play()
+   
+    
 
 const loadQuiz = function() {
     // Ссылки на DOM элементы
     const questionBox = document.querySelector('.questions')
     const answerBox = document.querySelector('.answers')
     const checker = document.querySelector('.checker')
+    
+
     // const music = document.querySelector('.checker')
     // Данные
     const questionsBank = {
-      '1. 🥝🥝🥝 + 🥝🥝?' : ['🥝', '🍐', '🍎', 2],
-      '2. What horse does not match?' : ['🐴', '🐴' , '🦄', 2],
-      '3. What animal does not match?? ' : ['🦁', '🐳', '🦈', 0],
-      '4. What horse does match?' : ['🦁', '🦄', 2]
-    }
+      '1. 🥝🥝🥝 + 🥝🥝 = ?' : ['6', '4', '5', 2],
+      '2. 🍎🍎🍎🍎 - 🍎🍎 = ?' : ['3', '2', '1', 1],
+      '3. What horse does not match?' : ['🐴', '🐴' , '🦄', 2],
+      '4. What animal does not match? ' : ['🦁', '🐳', '🦈', 0],
+      '5. How many days are in week? ' : ['7', '6', '8', 0],
+      '6. What vehicle is the fastest? ' : ['🚜', '🛵', '🛩', 2],
+      '7. Find yellow color? ' : ['🧡', '💚', '💛', 2],
+      '8. Find red color? ' : ['🟠', '🔴', '🟢', 1],
+      '9. Choose blue color? ' : ['🔵', '🟣', '🟡', 0],
+    }  
   
     // Счетчик текущей страницы
     let current = 0
@@ -75,12 +86,12 @@ const loadQuiz = function() {
     // Загрузка первой страницы
     loadQuestion(current)
     loadAnswers(current)
-    
+    //music.play();  
   }
   
   // Загрузка приложения по готовности HTML
   document.addEventListener('DOMContentLoaded', loadQuiz)
 
-  formElement.reset()  
+  // elem(play)
 
   
