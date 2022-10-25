@@ -23,6 +23,7 @@ const loadQuiz = function() {
       '7. Find yellow color? ' : ['🧡', '💚', '💛', 2],
       '8. Find red color? ' : ['🟠', '🔴', '🟢', 1],
       '9. Choose blue color? ' : ['🔵', '🟣', '🟡', 0],
+      '10. 🅰️ for...? ' : ['🍎', '🍦', '🐕', 0],
     }  
   
     // Счетчик текущей страницы
@@ -41,7 +42,7 @@ const loadQuiz = function() {
   
       answers.forEach((answer, index) => {
         if (index !== answers.length-1) {
-  console.log(index,answers)
+  
         const createDiv = document.createElement('div')
         createDiv.textContent = answers[index]
         createDiv.classList.add("answers-flex");
