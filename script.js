@@ -1,14 +1,17 @@
+
+
 const loadQuiz = function() {
     // Ссылки на DOM элементы
     const questionBox = document.querySelector('.questions')
     const answerBox = document.querySelector('.answers')
     const checker = document.querySelector('.checker')
-  
+    // const music = document.querySelector('.checker')
     // Данные
     const questionsBank = {
-      '1. What color does not match?' : ['🥝', '🍐', '🍎', 0],
-      'What is the capital city of Switzerland?' : ['Zurich', 'Bern' , 'Geneva', 1],
-      'What is the capital city of Germany? ' : ['Munich', 'Dresden', 'Berlin', 1]
+      '1. 🥝🥝🥝 + 🥝🥝?' : ['🥝', '🍐', '🍎', 2],
+      '2. What horse does not match?' : ['🐴', '🐴' , '🦄', 2],
+      '3. What animal does not match?? ' : ['🦁', '🐳', '🦈', 0],
+      '4. What horse does match?' : ['🦁', '🦄', 2]
     }
   
     // Счетчик текущей страницы
@@ -26,15 +29,15 @@ const loadQuiz = function() {
       answerBox.innerHTML = ''
   
       answers.forEach((answer, index) => {
-        if (index === answers[answers.length - 1]) return
-  
+        if (index !== answers.length-1) {
+  console.log(index,answers)
         const createDiv = document.createElement('div')
         createDiv.textContent = answers[index]
         createDiv.classList.add("answers-flex");
 
         createDiv.addEventListener('click', checkAnswer(index, answers)) // можно не навешивать на каждый элемент а повесить на весь контейнер answers
   
-        answerBox.appendChild(createDiv)
+        answerBox.appendChild(createDiv)}
       })
     }
   
@@ -50,7 +53,7 @@ const loadQuiz = function() {
         loadQuestion(current)
         loadAnswers(current)
       } else {
-        questionBox.innerHTML = 'Game over'
+        questionBox.innerHTML = 'Try again'
         answerBox.innerHTML = ''
       }
     }
@@ -58,7 +61,7 @@ const loadQuiz = function() {
     // Функция отвечает за отображение правильных и не правильных ответов
     function addChecker(flag) {
       const createDiv = document.createElement('div')
-      createDiv.textContent = $;{current + 1}
+      createDiv.textContent = `${current + 1}`
   
       if (flag) {
         createDiv.className += 'correct'
@@ -72,7 +75,12 @@ const loadQuiz = function() {
     // Загрузка первой страницы
     loadQuestion(current)
     loadAnswers(current)
+    
   }
   
   // Загрузка приложения по готовности HTML
   document.addEventListener('DOMContentLoaded', loadQuiz)
+
+  formElement.reset()  
+
+  
