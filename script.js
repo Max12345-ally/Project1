@@ -9,7 +9,7 @@ const loadQuiz = function() {
     const questionBox = document.querySelector('.questions')
     const answerBox = document.querySelector('.answers')
     const checker = document.querySelector('.checker')
-    
+    const results = document.querySelector('.result')
 
     // const music = document.querySelector('.checker')
     // Данные
@@ -24,10 +24,17 @@ const loadQuiz = function() {
       '8. Find red color? ' : ['🟠', '🔴', '🟢', 1],
       '9. Choose blue color? ' : ['🔵', '🟣', '🟡', 0],
       '10. 🅰️ for...? ' : ['🍎', '🍦', '🐕', 0],
+      '11. 🅱️ for...? ' : ['👗', '💧', '🦋', 2],
+      '12. Ⓜ️ for...? ' : ['🍟', '🐵', '🐤', 1],
+      '13. What lives in the forest? ' : ['🦊', '🐶', '🐻', 0],
+      '14. Who lives in the ocean? ' : ['🐝', '🦉', '🐬', 2],
+      '15. Who eats bananas? ' : ['🦩', '🐒', '🐊', 1]
     }  
   
     // Счетчик текущей страницы
     let current = 0
+    let numCorrect = 0;
+    
   
     // Функция отображает текущий вопрос
     function loadQuestion(current) {
@@ -55,12 +62,15 @@ const loadQuiz = function() {
   
     // Функция проверяет правильность ответа и отвечает за отображение следующей страницы
     const checkAnswer = (givenAnswerIndex, answers) => () => {
-      const correctAnswer = answers[answers.length - 1]
+    const correctAnswer = answers[answers.length - 1]
+    
   
       addChecker(givenAnswerIndex === correctAnswer)
   
       if (current < Object.keys(questionsBank).length - 1) {
         current += 1
+        
+        console.log(numCorrect)
   
         loadQuestion(current)
         loadAnswers(current)
@@ -68,6 +78,7 @@ const loadQuiz = function() {
         questionBox.innerHTML = 'Try again'
         answerBox.innerHTML = ''
       }
+      results.innerHTML = `${numCorrect} correct out of ${Object.keys(questionsBank).length}`;
     }
   
     // Функция отвечает за отображение правильных и не правильных ответов
@@ -78,6 +89,7 @@ const loadQuiz = function() {
       if (flag) {
         createDiv.className += 'correct'
         checker.appendChild(createDiv)
+        numCorrect++
       } else {
         createDiv.className += 'false'
         checker.appendChild(createDiv)

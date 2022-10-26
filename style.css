@@ -121,3 +121,8 @@ font-size: 50px;
     display: flex;
     justify-content: space-around;
 }
+.result {
+    color:#60D8FF;
+    font-size: 50px;
+    text-shadow: 6px 7px 7px rgb(144, 143, 143);
+}
