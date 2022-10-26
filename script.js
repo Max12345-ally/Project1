@@ -76,6 +76,8 @@ const loadQuiz = function() {
         loadAnswers(current)
       } else {
         questionBox.innerHTML = 'Try again'
+        questionBox.style.cursor = 'pointer';
+        questionBox.addEventListener('click',(onClick)=>{window.location.reload()})
         answerBox.innerHTML = ''
       }
       results.innerHTML = `${numCorrect} correct out of ${Object.keys(questionsBank).length}`;
@@ -104,7 +106,7 @@ const loadQuiz = function() {
   
   // Загрузка приложения по готовности HTML
   document.addEventListener('DOMContentLoaded', loadQuiz)
-
+  
   // elem(play)
 
   
