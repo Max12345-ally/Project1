@@ -4,6 +4,10 @@ Trivia Game the vesrion for Kids.
 
 In the 1960s, college students and others began to informally trade questions and answers about the popular culture of their youth. The first known documented labeling of this casual parlor game as "Trivia" was in a Columbia Daily Spectator column published on February 5, 1965.
 
+Wireframe
+
+
+
 Opening Screen.
 
 ![Kids Quiz](https://user-images.githubusercontent.com/82536307/198367903-0aa77109-c1ee-4f51-8c8a-48dfce9f3aef.png)
