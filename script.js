@@ -41,7 +41,7 @@ const loadQuiz = function() {
       const question = Object.keys(questionsBank)[current]
       questionBox.innerHTML = question
     }
-  console.log(loadQuestion)
+  
     // Функция отображает ответы относящиеся к текущему вопросу и навешивает обработчик клика
     function loadAnswers(current) {
       const answers = Object.values(questionsBank)[current]
@@ -70,7 +70,7 @@ const loadQuiz = function() {
       if (current < Object.keys(questionsBank).length - 1) {
         current += 1
         
-        console.log(numCorrect)
+        
   
         loadQuestion(current)
         loadAnswers(current)

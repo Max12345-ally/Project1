@@ -38,7 +38,7 @@ h1{
     border-radius: 20px;
     padding: 5px;
     margin: 30px;
-    text-shadow: 6px 7px 7px rgb(144, 143, 143);  
+    text-shadow: 3px 4px 4px rgb(144, 143, 143);  
      
   }
 
@@ -121,7 +121,7 @@ font-size: 50px;
 .result {
     color:#60D8FF;
     font-size: 50px;
-    text-shadow: 6px 7px 7px rgb(144, 143, 143);
+    text-shadow: 3px 4px 4px rgb(144, 143, 143);
 }
 
 @media screen and (max-width: 600px) {
