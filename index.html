@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link href="http://fonts.cdnfonts.com/css/grobold" rel='stylesheet' type='text/css'>
+  <link href="http://fonts.cdnfonts.com/css/grobold" rel='stylesheet'>
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/grobold');
+</style> 
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="style.css"/>
   
@@ -23,7 +26,10 @@
       <div class="funboy">
     <img id="boy" src="giphy.gif" alt="Computer man" style="width:78px;height:78px;">   
     </div>
-  
+    <audio id="myAudio" controls autoplay>
+        
+      <source src="kids-music.mp3" allow='autoplay' type="audio/mp3">
+  </audio>
     <button onClick="window.location.reload();">Refresh Page</button>   
 </body>
 </html>
